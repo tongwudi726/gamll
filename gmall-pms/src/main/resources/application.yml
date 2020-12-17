@@ -11,3 +11,10 @@ mybatis-plus:
       id-type: auto   #默认使用主键自动增长  面试时候说用分布式ID
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis日志
+aliyun:
+  oss:
+    endpoint: oss-cn-shanghai.aliyuncs.com #oss-cn-shanghai.aliyuncs.com
+    accessId: LTAI4GABS1FZbyaeH5cPAVGz
+    accessKey: 5olS8J5fGqqFb5YHyghtY5pgceJru8
+    #bucket可以在控制台创建，也可以使用java代码创建，注意先测试bucket是否已被占用
+    bucket: tongwudi-guli-file
