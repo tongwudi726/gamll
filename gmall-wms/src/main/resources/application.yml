@@ -1,0 +1,11 @@
+server:
+  port: 18083
+mybatis-plus:
+  type-aliases-package: com.atguigu.gmall.wms
+  mapper-locations: mapper/wms/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+feign:
+  sentinel:
+    enabled: true

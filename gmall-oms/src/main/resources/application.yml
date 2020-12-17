@@ -1,0 +1,13 @@
+server:
+  port: 18084
+mybatis-plus:
+  mapper-locations: classpath:mapper/pms/**/*.xml  #读取映射文件
+  type-aliases-package: con.atguigu.gamll.oms.entity
+  global-config:
+    db-config:
+      id-type: auto
+feign:
+  sentinel:
+    enabled: true  #开启熔断管理
+
+

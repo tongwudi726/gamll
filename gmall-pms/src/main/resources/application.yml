@@ -1,33 +1,13 @@
 server:
   port: 18081
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-    sentinel:
-      transport:
-        dashboard: 127.0.0.1:8080
-        port: 8719
-  zipkin:
-    base-url: http://127.0.0.1:9411
-    sender:
-      type: web
-    discovery-client-enabled: true
-  sleuth:
-    sampler:
-      probability: 1
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/guli_pms
-    username: root
-    password: 123456
 feign:
   sentinel:
     enabled: true
 mybatis-plus:
-  mapper-locations: classpath:mapper/pms/**/*.xml
+  mapper-locations: classpath:mapper/pms/**/*.xml    #读取映射文件
   type-aliases-package: com.atguigu.gamll.pms.entity
   global-config:
     db-config:
-      id-type: auto
+      id-type: auto   #默认使用主键自动增长  面试时候说用分布式ID
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis日志

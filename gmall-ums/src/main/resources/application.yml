@@ -1,0 +1,11 @@
+server:
+  port: 18082
+mybatis-plus:
+  mapper-locations: maapper/ums/**/*.xml
+  type-aliases-package: com.atguigu.gmall.ums.entity
+  global-config:
+    db-config:
+      id-type: auto
+feign:
+  sentinel:
+    enabled: true
