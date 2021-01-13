@@ -11,3 +11,17 @@ mybatis-plus:
       id-type: auto   #默认使用主键自动增长  面试时候说用分布式ID
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis日志
+spring:
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: gamll-tx-group
+  rabbitmq:
+    virtual-host: /tongwudi
+    host: 192.168.44.130
+    username: admin
+    password: 123456
+    #生产者确认 异步  确认消息是否到达虚拟机
+    publisher-confirm-type: correlated
+    #确认消息是否到达队列
+    publisher-returns: true
